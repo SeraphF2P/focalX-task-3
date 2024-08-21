@@ -1,0 +1,37 @@
+/* src/Accordion.module.css */
+.accordion {
+  display: grid;
+  padding-inline: 8px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: hsl(0, 0%, 97%);
+}
+
+.accordionItem {
+}
+
+.accordionTitle {
+  padding: 16px;
+  cursor: pointer;
+  text-transform: capitalize;
+  border-bottom: 1px solid #ccc;
+  paf &:hover {
+    color: rgb(var(--primary));
+  }
+}
+
+.accordionContent {
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 0;
+  transition: grid-template-rows 0.3s ease;
+}
+
+.accordionContent[data-isopen="true"] {
+  grid-template-rows: 1fr;
+}
+
+.gridRow {
+  grid-row: 1;
+  padding: 10px;
+}

@@ -1,0 +1,18 @@
+.wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 8px;
+  justify-content: start;
+  align-items: center;
+  cursor: pointer;
+  text-wrap: nowrap;
+}
+.icon {
+  width: 24px;
+  height: 24px;
+}
+@media (min-width: 768px) {
+  .icon {
+    color: rgb(var(--primary));
+  }
+}

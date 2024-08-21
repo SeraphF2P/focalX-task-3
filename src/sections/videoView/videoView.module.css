@@ -1,0 +1,148 @@
+.section {
+  min-height: 100vh;
+  width: 100%;
+}
+.container {
+  width: 100%;
+  padding-inline: 1rem;
+  margin-inline: auto;
+}
+.first {
+  position: relative;
+  width: 100%;
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 32px;
+
+  h2 {
+    text-transform: capitalize;
+    font-size: xx-large;
+    color: white;
+    text-align: center;
+    position: relative;
+    padding-inline: 8px;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    object-fit: cover;
+  }
+  div {
+    width: 288px;
+    height: 144px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      border-radius: 8px;
+      object-fit: cover;
+      position: absolute;
+      inset: 0;
+    }
+    .playIcon {
+      width: 48px;
+      height: 48px;
+      position: relative;
+      border-radius: 100%;
+      outline: 12px solid rgb(var(--primary), 0.4);
+      background-color: rgb(var(--primary));
+      fill: white;
+    }
+  }
+}
+.second {
+  padding: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 32px;
+  .card {
+    border-radius: 8px;
+    background-color: rgb(var(--primary), 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 16px;
+    padding-inline: 32px;
+    width: 224px;
+    gap: 16px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      translate: 50% -50%;
+      width: 40px;
+      height: 40px;
+      background-color: rgb(var(--primary));
+      border-radius: 100%;
+    }
+    p {
+      text-transform: capitalize;
+      font-size: larger;
+      &:first-child {
+        font-weight: 900;
+        color: rgb(var(--primary));
+      }
+      &:last-child {
+        width: 120px;
+      }
+    }
+  }
+}
+@media (min-width: 420px) {
+  .container {
+    max-width: 420px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+  .first {
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+
+    div {
+      position: absolute;
+      width: clamp(640px, 80vw, 1024px);
+      height: 66vh;
+      bottom: 0px;
+      left: 50%;
+      translate: -50% 50%;
+    }
+  }
+  .second {
+    margin-top: 33vh;
+    padding-block: 128px;
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
