@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "./header.module.css";
 import { DisktopNav } from "./disktopNav/DisktopNav";
-import { MobileNav } from "./mobileNav/mobileNav";
 import { SocialLinks } from "./socialLinks/SocialLinks";
 import { TextWithIcon } from "./../../components/ui";
+import { MobileNav } from "./mobileNav/MobileNav";
 export const Header = () => {
   return (
     <header className={styles.header}>

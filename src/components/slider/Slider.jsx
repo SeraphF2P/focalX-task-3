@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import useCarousel from "../../hooks/useCarousel";
 import { Icon } from "../ui/Icon";
 import styles from "./slider.module.css";
@@ -10,7 +10,19 @@ const images = [
 ];
 
 export const Slider = () => {
-  const { count, decr, incr } = useCarousel(images.length);
+  const [count, setCount] = useState(0);
+  const incr = () => {
+    setCount((prev) => {
+      if (prev === images.length - 1) return 0;
+      return prev + 1;
+    });
+  };
+  const decr = () => {
+    setCount((prev) => {
+      if (prev === 0) return images.length - 1;
+      return prev - 1;
+    });
+  };
   return (
     <section className={styles.splide} aria-label="photos of villas">
       <div
@@ -50,6 +62,18 @@ export const Slider = () => {
         >
           <Icon.arrowRight />
         </button>
+      </div>
+      <div className={styles.pagenations}>
+        {images.map((_, index) => {
+          return (
+            <span
+              key={index}
+              data-active={index === count}
+              className={styles.pagenationDot}
+              onClick={() => setCount(index)}
+            />
+          );
+        })}
       </div>
     </section>
   );

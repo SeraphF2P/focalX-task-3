@@ -1,6 +1,6 @@
 import React from "react";
 
-import styles from "./contactus.module.css";
+import styles from "./contactUs.module.css";
 import { Input, Redheader, TextArea } from "../ui/index";
 
 export const Contactus = () => {
