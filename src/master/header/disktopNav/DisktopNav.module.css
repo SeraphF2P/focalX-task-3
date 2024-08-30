@@ -1,0 +1,24 @@
+.navbar {
+  display: none;
+}
+@media (min-width: 768px) {
+  .navbar {
+    display: flex;
+    height: 80px;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+  }
+  .navMain {
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    padding-right: 24px;
+    gap: 8px;
+  }
+}
+@media (min-width: 1024px) {
+  .navMain {
+    gap: 40px;
+  }
+}

@@ -1,0 +1,38 @@
+.accordion {
+  display: grid;
+  padding-inline: 8px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: hsl(0, 0%, 97%);
+}
+
+.accordionItem:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+}
+
+.accordionTitle {
+  padding: 16px;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+.accordionTitle:hover {
+  color: rgb(var(--primary));
+}
+
+.accordionContent {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s linear;
+}
+
+.accordionContent[data-isopen="true"] {
+  grid-template-rows: 1fr;
+}
+
+.gridRow {
+  overflow: hidden;
+}
+.gridRow p {
+  padding-inline: 16px;
+  padding-bottom: 16px;
+}

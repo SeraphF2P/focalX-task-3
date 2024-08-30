@@ -1,0 +1,9 @@
+.link {
+  text-transform: capitalize;
+  font-weight: bold;
+  color: black;
+}
+.link:hover,
+.link.active {
+  color: rgb(var(--primary));
+}

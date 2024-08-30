@@ -1,0 +1,92 @@
+.card {
+  background-color: whitesmoke;
+  border-radius: 8px;
+  box-shadow: 1px 1px 10px rgb(0, 0, 0, 0.2);
+  padding: 24px;
+  width: 304px;
+  text-transform: capitalize;
+}
+.card .imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.card .imageWrapper img {
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.card .cardHead {
+  display: flex;
+  padding-block: 16px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card .cardHead p:first-child {
+  padding-inline: 8px;
+  padding-block: 6px;
+  border-radius: 4px;
+  background-color: rgb(var(--primary), 0.4);
+}
+.card .cardHead p:last-child {
+  font-weight: 900;
+  color: rgb(var(--primary));
+}
+.card .address {
+  word-spacing: 0px;
+  font-size: small;
+  text-wrap: nowrap;
+  font-weight: 800;
+}
+.card .privilage {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding-block: 16px;
+}
+
+.card .privilage div p {
+  display: inline;
+  line-height: 10px;
+  font-size: smaller;
+}
+.card .privilage div p:first-child {
+  color: gray;
+}
+.card .privilage div p:last-child {
+  font-weight: bold;
+}
+.card .btnContainer {
+  border-top: 1px solid lightgray;
+  padding-top: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card .btn {
+  position: relative;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  border-radius: 20px;
+  text-wrap: nowrap;
+  background-color: black;
+  color: white;
+  padding-inline: 24px;
+  text-transform: capitalize;
+  font-size: small;
+  cursor: pointer;
+  cursor: pointer;
+  transition: scale 0.2s linear;
+}
+.card .btn:hover {
+  scale: 1.05;
+  background-color: hsl(0, 0%, 20%);
+}

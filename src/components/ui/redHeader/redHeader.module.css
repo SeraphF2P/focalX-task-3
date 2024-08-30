@@ -1,0 +1,17 @@
+.main {
+  font-weight: 700;
+  position: relative;
+  color: rgb(var(--alert));
+  text-transform: uppercase;
+  font-size: small;
+  margin-left: 8px;
+}
+.main::before {
+  content: "";
+  background-color: rgb(var(--alert));
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  left: -8px;
+  top: 0;
+}

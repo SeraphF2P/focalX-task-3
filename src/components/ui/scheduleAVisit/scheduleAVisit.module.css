@@ -1,0 +1,37 @@
+.icon {
+  background-color: rgb(var(--primary));
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  padding: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  bottom: 50%;
+  translate: 0% 50%;
+}
+.btn {
+  position: relative;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  text-wrap: nowrap;
+  background-color: black;
+  color: white;
+  padding-left: 56px;
+  padding-right: 24px;
+  min-width: min-content;
+  cursor: pointer;
+  transition: scale 0.2s linear;
+}
+.btn:hover {
+  scale: 1.05;
+  background-color: hsl(0, 0%, 20%);
+}
+.link {
+  color: white;
+}

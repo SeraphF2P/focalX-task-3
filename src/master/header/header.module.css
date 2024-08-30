@@ -1,0 +1,89 @@
+.header {
+  display: flex;
+  background-color: white;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  height: 100px;
+  z-index: 40;
+  box-shadow: 4px 4px 4px rgb(0, 0, 0, 0.2);
+}
+.topBar {
+  display: none;
+}
+.topBarContainer {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+.headercontainer {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+.logo {
+  font-size: 42px;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 640px) {
+  .topBarContainer {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .topBarContainer,
+  .headercontainer {
+    max-width: 768px;
+  }
+  .header {
+    height: 148px;
+    flex-direction: column;
+  }
+  .topBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    border-bottom: 2px solid #e7e7e7;
+    height: 48px;
+  }
+  .topBarContainer {
+    flex-direction: row;
+  }
+  .emailAndLocation {
+    display: flex;
+    gap: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .topBarContainer,
+  .headercontainer {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .topBarContainer,
+  .headercontainer {
+    max-width: 1280px;
+  }
+}

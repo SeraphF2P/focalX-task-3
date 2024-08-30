@@ -1,0 +1,93 @@
+.main {
+  width: 100%;
+  padding-inline: 1rem;
+  padding-block: 4rem;
+  margin-inline: auto;
+  display: grid;
+  gap: 1rem;
+}
+.main > * {
+  margin: auto;
+}
+.articale {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+  width: 100%;
+}
+.articale h2 {
+  text-transform: capitalize;
+  font-size: xx-large;
+  text-align: start;
+}
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.imageWrapper img {
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.header {
+  display: flex;
+  padding-block: 16px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header p:first-child {
+  padding-inline: 8px;
+  padding-block: 6px;
+  border-radius: 4px;
+  background-color: rgb(var(--primary), 0.4);
+}
+.header p:last-child {
+  font-weight: 900;
+  color: rgb(var(--primary));
+}
+.address {
+  word-spacing: 0px;
+  text-wrap: nowrap;
+  font-weight: 800;
+}
+@media (min-width: 420px) {
+  .main {
+    max-width: 420px;
+  }
+}
+@media (min-width: 768px) {
+  .main {
+    max-width: 768px;
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "articale card"
+      "articale card"
+      "bestDeal bestDeal"
+      "bestDeal bestDeal";
+  }
+  .card {
+    grid-area: card;
+    margin-top: 0px;
+    margin-right: 0px;
+  }
+  .bestDeal {
+    grid-area: bestDeal;
+  }
+  .articale {
+    grid-area: articale;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main {
+    max-width: 1024px;
+  }
+}

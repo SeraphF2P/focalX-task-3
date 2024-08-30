@@ -35,16 +35,16 @@ a {
   border: 0;
 }
 .splide__pagination__page {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255) !important;
 }
 .splide__pagination__page.is-active {
-  background-color: rgb(var(--primary));
+  background-color: rgb(var(--primary)) !important;
 }
 .splide__arrow {
-  width: 40px;
-  height: 40px;
-  background-color: rgb(255, 255, 255, 0.3);
+  width: 40px !important;
+  height: 40px !important;
+  background-color: rgb(255, 255, 255, 0.3) !important;
 }
 .splide__arrow svg {
-  fill: rgb(255, 255, 255);
+  fill: rgb(255, 255, 255) !important;
 }
